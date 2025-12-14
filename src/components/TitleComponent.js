@@ -1,6 +1,11 @@
 const TitleComponent = () => {
 
-  return <h1 className="title"> React Title components </h1>;
+   const check = <span> ✔ </span>;
+
+  return <h1 className="title"> React Title components  {check}</h1>;
 }
 
+
+
 export default TitleComponent;
+
