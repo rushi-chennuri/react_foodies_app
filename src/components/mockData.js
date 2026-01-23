@@ -3,7 +3,7 @@ export const restaurantMocData = [
     id: 1,
     name: "Pizza Hut",
     cuisine: "Italian, Pizza",
-    rating: 4.2,
+    rating: 3.5,
     deliveryTime: 30,
     image: "https://images.unsplash.com/photo-1513104890138-7c749659a591?w=300&h=200&fit=crop"
   },
@@ -11,7 +11,7 @@ export const restaurantMocData = [
     id: 2,
     name: "Burger King",
     cuisine: "American, Burgers",
-    rating: 4.5,
+    rating: 3.6,
     deliveryTime: 25,
     image: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=300&h=200&fit=crop"
   },

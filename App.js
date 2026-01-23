@@ -1,45 +1,25 @@
-import React from "react"
-import ReactDOM from "react-dom/client"
 
-//react core
-const heading = React.createElement("h1", {id:"heading"}, "greate React");
+import React from "react";
+import "./css/styles.css";
+import ReactDOM from "react-dom/client";
+import HeaderComponent from "./src/components/HeaderComponent";
+import BodyComponent from "./src/components/BodyComponent";
+import FooterComponent from "./src/components/FooterComponent";
 
-// now will use JSX
-
-//single line code snippet
-const heading1 = <h1 id="heading1">React using jsx</h1>
-
-//but we use multiple line code snippet
-
-const heading5 = (
-    <h1 id="heading1">
-        React using jsx
-    </h1>
-);
-
-
-//there are some changes as html vs jsx class vs className , for attribute use htmlfor
-
-//this are the just react components and its just javascript objects
-
-import HeadingComponent from "./src/components/HeadingComponent.js";
-
+const App = () => {
+    return (
+        <div className="app">
+            <HeaderComponent />
+            <BodyComponent />
+            <FooterComponent />
+        </div>
+    );
+};
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<HeadingComponent></HeadingComponent>);
+root.render(<App />);
 
-
-
-
-
-
-
-
-
-
-//now will use the jsx
-
-
+export default App;
 
 
 
