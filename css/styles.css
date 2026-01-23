@@ -21,7 +21,9 @@
 }
 
 .rest-card {
-  width: 280px;
+  width: 200px;
+  height: 250px;
+  padding: 15px;
   background-color: white;
   border-radius: 12px;
   overflow: hidden;
@@ -30,7 +32,13 @@
   transition: all 0.3s ease;
 }
 
-
+.rest-logo {
+    font-weight: bold;
+    font-size: 24px;
+    color: #ff6347;
+    border-radius: 8px;
+    object-fit: cover;
+}
 
 .filter-btn {
   padding: 12px 25px;
@@ -47,8 +55,39 @@
   gap: 8px;
 }
 
+.filter-container {
+    display: flex;
+    gap: 20px;
+    margin-right: 80%;
+    align-items: center;
+    margin: 20px 0;
+    margin-left: 5%;
+}
 
 
+
+.search-text {
+    padding: 12px 24px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    background: white;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.search-btn, .filter-btn {
+    padding: 12px 24px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    background: white;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.search-btn:hover, .filter-btn:hover {
+    background: #f0f0f0;
+}
 
 .header {
   display: flex;
@@ -62,16 +101,21 @@
 }
 
 .nav-items {
+
   display: flex;
   align-items: center;
+  gap: 30px;
+  
 }
 
 .nav-items > ul{
     display: flex;
-    gap: 200px;
+    gap: 90px;
     margin: 0;
     padding: 0;
     list-style-type: none;
+    font-weight: bold; 
+    
 }   
 
 .nav-items ul>li {
@@ -79,5 +123,7 @@
   font-size: 16px;
   color: #333;
 }
+
+
 
 /* HMR trigger: appended comment */

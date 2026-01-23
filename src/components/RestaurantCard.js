@@ -1,12 +1,10 @@
 const RestaurantCard = (props) => {
 
-    console.log(props);
-    const {name, image, rating, time} = props;
+    const restDatainfo = props.restData.info;
 
-    const {restData} = props;
+    const {name, cloudinaryImageId, avgRating, locality} = restDatainfo;
 
-
-    const restDateFetch = restData;
+const CDN_URL = "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/";
 
     //prevent runtime errors using optional chaining
 
@@ -14,12 +12,13 @@ const RestaurantCard = (props) => {
     return (
         <div className="rest-card">
             <div className="card-image">
-                <img className="restaurant-image" src= {restDateFetch?.image}
-                />   
+                <img src={CDN_URL + cloudinaryImageId}
+                style={{ width: '100%', height: '120px',  objectFit: 'cover', borderRadius: '8px' }}
+               />   
             </div>
-            <h3>{restDateFetch?.name}</h3>
-            <p>{restDateFetch?.rating}</p>
-            <p>{restDateFetch?.time}</p>
+            <h3>{name}</h3>
+            <p>{avgRating}</p>
+            <p>{locality}</p>
         </div>
     )
 }
