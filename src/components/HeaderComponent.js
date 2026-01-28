@@ -1,12 +1,21 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "./hooks/useOnlineStatus";
+import UserContext from "../util/UserContext";
+import { useSelector } from "react-redux";
 
 const HeadingComponent = () =>{
 
    const[btnName, setBtnName] = useState("Login");
 
    const onlineStatus = useOnlineStatus();
+
+
+
+   const {loggedUser} = useContext(UserContext);
+
+   const cartItems = useSelector((store) => store.cart.items)
+
 
     return (
 
@@ -30,7 +39,7 @@ const HeadingComponent = () =>{
                         <Link to="/contact">Contact</Link> 
                         </li>
                     <li>
-                        <Link to="/cart">Cart</Link>
+                        <Link to="/cart">Cart ({cartItems.length})</Link>
                         
                     </li>
                      <li>
@@ -39,6 +48,8 @@ const HeadingComponent = () =>{
                     <button className="login-button" onClick={()=> {
                          btnName === "Login" ? setBtnName("Logout") : setBtnName("Login"); 
                     }}>{btnName}</button>
+                    <span>{loggedUser}</span>
+
                 </ul>
             </div>
 
